@@ -30,12 +30,12 @@ function finish {
 trap finish EXIT
 
 # Copy input data into the container
-docker cp "$INPUT_JSON" "$container:/app/data/input.json"
-docker cp "$CODING_DIR/." "$container:/app/data/coding"
+docker cp "$INPUT_JSON" "$container:/data/input.json"
+docker cp "$CODING_DIR/." "$container:/data/coding"
 
 # Run the image as a container.
 docker start -a -i "$container"
 
 # Copy the output data back out of the container
 mkdir -p "$(dirname "$OUTPUT_JSON")"
-docker cp "$container:/app/data/output.json" "$OUTPUT_JSON"
+docker cp "$container:/data/output.json" "$OUTPUT_JSON"
