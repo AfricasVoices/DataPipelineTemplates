@@ -21,7 +21,7 @@ if __name__ == "__main__":
     with open(input_path, "r") as f:
         data = TracedDataJsonIO.import_json_to_traced_data_iterable(f)
 
-    # TODO: Clean/filter messages
+    # FIXME: Clean/filter messages
 
     # Write json output
     if os.path.dirname(json_output_path) is not "" and not os.path.exists(os.path.dirname(json_output_path)):
@@ -29,4 +29,4 @@ if __name__ == "__main__":
     with open(json_output_path, "w") as f:
         TracedDataJsonIO.export_traced_data_iterable_to_json(data, f, pretty_print=True)
 
-    # TODO: Output to other formats for analysis, using the TracedData exporters in core_data_modules.traced_data.io
+    # FIXME: Output to other formats for analysis, using the TracedData exporters in core_data_modules.traced_data.io

@@ -2,7 +2,7 @@
 
 set -e
 
-IMAGE_NAME=template-survey-merge-coded # TODO: Update image name to include the name of project.
+IMAGE_NAME=template-survey-merge-coded # FIXME: Update image name to include the name of project.
 
 # Check that the correct number of arguments were provided.
 if [ $# -ne 5 ]; then

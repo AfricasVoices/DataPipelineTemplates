@@ -28,7 +28,7 @@ if __name__ == "__main__":
     with open(input_path, "r") as f:
         data = TracedDataJsonIO.import_json_to_traced_data_iterable(f)
 
-    # TODO: Clean survey data
+    # FIXME: Clean survey data
 
     # Write json output
     if os.path.dirname(json_output_path) is not "" and not os.path.exists(os.path.dirname(json_output_path)):
@@ -42,12 +42,12 @@ if __name__ == "__main__":
         if not os.path.exists(coded_output_directory):
             os.makedirs(coded_output_directory)
 
-        # TODO: Set the <example-arguments> to export a particular column e.g. "age", "age_clean", "Age"
+        # FIXME: Set the <example-arguments> to export a particular column e.g. "age", "age_clean", "Age"
         with open(path.join(coded_output_directory, "<output-file>.csv"), "w") as f:
             TracedDataCodaIO.export_traced_data_iterable_to_coda_with_scheme(
                 data, "<key-of-raw>", "<key-of-coded>", "<name-in-Coda>", f)
 
-        # TODO: Re-use the above code sample to export other columns which need verifying/coding.
+        # FIXME: Re-use the above code sample to export other columns which need verifying/coding.
     else:
         assert coding_mode == "coding-csv", "coding_mode was not one of 'coda' or 'coding-csv'"
 
@@ -55,9 +55,9 @@ if __name__ == "__main__":
         if not os.path.exists(coded_output_directory):
             os.makedirs(coded_output_directory)
 
-        # TODO: Set the <example-arguments> to export a particular column e.g. "age", "age_clean", "Age"
+        # FIXME: Set the <example-arguments> to export a particular column e.g. "age", "age_clean", "Age"
         with open(path.join(coded_output_directory, "<output-file>.csv"), "w") as f:
             TracedDataCodingCSVIO.export_traced_data_iterable_to_coding_csv_with_scheme(
                 data, "<key-of-raw>", "<key-of-coded>", f)
 
-        # TODO: Re-use the above code sample to export other columns which need verifying/coding.
+        # FIXME: Re-use the above code sample to export other columns which need verifying/coding.

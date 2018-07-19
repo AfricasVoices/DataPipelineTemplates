@@ -30,23 +30,23 @@ if __name__ == "__main__":
     # Merge coded data into the loaded data file
     if coding_mode == "coda":
         # Merge manually coded Coda files into the cleaned dataset
-        # TODO: Set the <example-arguments> to import a particular column e.g. "age", "age_clean", "Age"
+        # FIXME: Set the <example-arguments> to import a particular column e.g. "age", "age_clean", "Age"
         with open(path.join(coded_input_directory, "<input-file>.csv"), "r") as f:
             data = list(TracedDataCodaIO.import_coda_to_traced_data_iterable(
                 user, data, "<key-of-raw>", "<key-of-coded>", f, True))
 
-        # TODO: Re-use the above code sample to export other columns which need importing.
+        # FIXME: Re-use the above code sample to export other columns which need importing.
     else:
         assert coding_mode == "coding-csv", "coding_mode was not one of 'coda' or 'coding-csv'"
 
         # Merge manually coded CSV files into the cleaned dataset
-        # TODO: Set the <example-arguments> to import a particular column e.g. "age", "age_clean", "Age"
+        # FIXME: Set the <example-arguments> to import a particular column e.g. "age", "age_clean", "Age"
         with open(path.join(coded_input_directory, "<input-file>.csv"), "r") as f:
             data = list(TracedDataCodingCSVIO.import_coding_csv_to_traced_data_iterable(
                 user, data, "<key_of_raw_in_data>", "<key_of_coded_in_data>",
                 "<key_of_raw_in_f>", "<key_of_coded_in_f>", f, True))
 
-        # TODO: Re-use the above code sample to export other columns which need importing.
+        # FIXME: Re-use the above code sample to export other columns which need importing.
 
     # Write coded data back out to disk
     if os.path.dirname(json_output_path) is not "" and not os.path.exists(os.path.dirname(json_output_path)):

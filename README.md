@@ -37,7 +37,7 @@ Then, in that directory:
 2. Synchronise existing dependencies with `$ pipenv sync`.
 3. If additional dependencies are required, install them with `$ pipenv install <dependency>`.
 4. Modify the python file for that stage by adding project-specific behaviour. 
-   Refer to the in-file TODOs for guidance on what to add.
+   Refer to the in-file FIXMEs for guidance on what to add.
 1. Test locally with `$ pipenv run python <file.py> <args>`
 1. Update the IMAGE_NAME variable at the top of `docker-run.sh`.
 1. If the modifications made in step 4 modified the program arguments for this stage, then update the `CMD` instruction
