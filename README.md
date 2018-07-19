@@ -6,11 +6,8 @@ data pipeline format across projects.
 
 ## Provided Templates
 The standard pipeline being used here takes the format:
-```
-            /--> fetch messages ------------------------------> messages ------------------------------------\
-SMS platform                                                                                                  --> analysis
-            \--> fetch surveys --> survey auto code --> Manually code in Coda or CSV --> survey merge coded -/
-```
+
+![Pipeline Diagram](doc/pipeline-overview.png)
  
 To fetch data from an SMS platform, use one of AVF's SMS fetchers (e.g. 
 [EchoMobileExperiments](https://github.com/AfricasVoices/EchoMobileExperiments) or
