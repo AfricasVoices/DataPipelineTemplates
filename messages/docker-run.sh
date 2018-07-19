@@ -6,7 +6,7 @@ IMAGE_NAME=template-messages # FIXME: Update image name to include the name of p
 
 # Check that the correct number of arguments were provided.
 if [ $# -ne 3 ]; then
-    echo "Usage: sh docker-run.sh <user> <input-file> <output-file>"
+    echo "Usage: sh docker-run.sh <user> <json-input-path> <json-output-path>"
     exit
 fi
 

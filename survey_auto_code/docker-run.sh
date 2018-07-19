@@ -6,7 +6,7 @@ IMAGE_NAME=template-survey-auto-code # FIXME: Update image name to include the n
 
 # Check that the correct number of arguments were provided.
 if [ $# -ne 5 ]; then
-    echo "Usage: sh docker-run.sh <user> <input-file> <output-file> <coding-mode> <coding-directory>"
+    echo "Usage: sh docker-run.sh <user> <json-input-path> <json-output-path> <coding-mode> <coded-output-path>"
     exit
 fi
 

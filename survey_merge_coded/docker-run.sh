@@ -6,7 +6,7 @@ IMAGE_NAME=template-survey-merge-coded # FIXME: Update image name to include the
 
 # Check that the correct number of arguments were provided.
 if [ $# -ne 5 ]; then
-    echo "Usage: sh docker-run.sh <user> <input-file> <coding-mode> <coding-directory> <output-file>"
+    echo "Usage: sh docker-run.sh <user> <json-input-path> <coding-mode> <coded-output-path> <json-output-path>"
     exit
 fi
 
