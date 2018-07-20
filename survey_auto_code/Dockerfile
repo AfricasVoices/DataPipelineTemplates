@@ -20,4 +20,4 @@ RUN mkdir /app/data
 
 # USER and CODING_MODE are environment variables which need to be set when constructing this container e.g. via
 # docker run or docker container create. Use docker-run.sh to set these automatically.
-CMD pipenv run python survey_auto_code.py "$USER" data/input.json data/output.json "$CODING_MODE" data/coding
+CMD pipenv run python survey_auto_code.py "$USER" /data/input.json /data/output.json "$CODING_MODE" /data/coding
