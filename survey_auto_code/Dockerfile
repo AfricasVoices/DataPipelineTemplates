@@ -12,11 +12,11 @@ ADD Pipfile.lock /app
 ADD Pipfile /app
 RUN pipenv sync
 
+# Make a directory for intermediate data
+RUN mkdir /data
+
 # Copy the rest of the project
 ADD . /app
-
-# Make a directory for intermediate data
-RUN mkdir /app/data
 
 # USER and CODING_MODE are environment variables which need to be set when constructing this container e.g. via
 # docker run or docker container create. Use docker-run.sh to set these automatically.

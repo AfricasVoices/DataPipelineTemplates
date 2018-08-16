@@ -6,17 +6,16 @@ from core_data_modules.traced_data.io import TracedDataJsonIO
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Cleans a list of messages, and outputs to formats "
                                                  "suitable for subsequent analysis")
-    parser.add_argument("user", help="User launching this program, for use by TracedData Metadata", nargs=1)
+    parser.add_argument("user", help="User launching this program, for use by TracedData Metadata")
     parser.add_argument("json_input_path", metavar="json-input-path",
-                        help="Path to the input JSON file, containing a list of serialized TracedData objects",
-                        nargs=1)
+                        help="Path to the input JSON file, containing a list of serialized TracedData objects")
     parser.add_argument("json_output_path", metavar="json-output-path",
-                        help="Path to a JSON file to write processed TracedData messages to", nargs=1)
+                        help="Path to a JSON file to write processed TracedData messages to")
 
     args = parser.parse_args()
-    user = args.user[0]
-    json_input_path = args.json_input_path[0]
-    json_output_path = args.json_output_path[0]
+    user = args.user
+    json_input_path = args.json_input_path
+    json_output_path = args.json_output_path
 
     # Load data from JSON file
     with open(json_input_path, "r") as f:
